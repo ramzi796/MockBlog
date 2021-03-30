@@ -1,0 +1,22 @@
+<h1 mat-dialog-title style="text-align: center;">Add Post</h1>
+<div mat-dialog-content style="text-align: center;">
+  <mat-form-field style="width: 100%;">
+    <mat-label>Enter Title</mat-label>
+    <input matInput [(ngModel)]="dialogData.title">
+  </mat-form-field>
+</div>
+<div mat-dialog-content style="text-align: center;">
+    <mat-form-field style="width: 100%;">
+        <mat-label>Enter Text</mat-label>
+        <textarea matInput
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="2"
+                  cdkAutosizeMaxRows="30"
+                  [(ngModel)]="dialogData.text"></textarea>
+      </mat-form-field>
+  </div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="dialogData" cdkFocusInitial>Ok</button>
+</div>

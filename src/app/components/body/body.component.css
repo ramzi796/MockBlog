@@ -1,0 +1,11 @@
+.leftPane {
+  padding: 10px;
+  width: 30%;
+  float: left;
+}
+
+.rightPane {
+  padding: 10px;
+  width: 65%;
+  float: left;
+}
